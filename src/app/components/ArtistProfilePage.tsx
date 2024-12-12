@@ -5,7 +5,6 @@ interface Artist {
   id: string;
   name: string;
   bio: string;
-  // Add other fields as needed
 }
 
 interface ArtistProfilePageProps {

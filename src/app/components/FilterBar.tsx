@@ -13,7 +13,6 @@ const FilterBar: React.FC<FilterBarProps> = ({ onFilterChange }) => {
           <option value="">All</option>
           <option value="hip-hop">Hip-Hop</option>
           <option value="rap">Rap</option>
-          {/* Add more genres as needed */}
         </select>
       </label>
       <label>
