@@ -1,6 +1,6 @@
 # Find Hip-Hop App
 
-The Find Hip-Hop App is an interactive map application that allows users to explore hip-hop artists geographically. Users can click on different regions of a map to discover artists associated with those areas. Clicking on an artist icon or marker opens a profile page with information about the artist, including their bio, popular tracks, and links to streaming platforms.
+[The Find Hip-Hop App](https://github.com/flashgoodenpro/find-hip-hop-app) is an interactive map application that allows users to explore hip-hop artists geographically. I'm building this application as a project for a non-profit called [Soul Food Cypher](https://www.soulfoodcypher.com/), which aims to change communities by using positive lyricism and freestyle. Users can click on different regions of a map to discover artists associated with those areas. Clicking on an artist icon or marker opens a profile page with information about the artist, including their bio, popular tracks, and links to streaming platforms.
 
 ## Features
 
