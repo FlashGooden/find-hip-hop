@@ -1,5 +1,5 @@
-import React from 'react';
-import { InfoWindow } from '@react-google-maps/api';
+import React from "react";
+import { InfoWindow } from "@react-google-maps/api";
 
 interface Artist {
   id: string;

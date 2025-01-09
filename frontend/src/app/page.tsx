@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import MapComponent from './components/MapComponent';
-import FilterBar from './components/FilterBar';
+"use client";
+import React, { useState } from "react";
+import MapComponent from "./components/MapComponent";
+import FilterBar from "./components/FilterBar";
 
 const HomePage: React.FC = () => {
   const [filters, setFilters] = useState({
-    genre: '',
-    popularity: '',
-    location: '',
+    genre: "",
+    popularity: "",
+    location: "",
   });
 
   const handleFilterChange = (filterType: string, value: string) => {
-    setFilters(prevFilters => ({
+    setFilters((prevFilters) => ({
       ...prevFilters,
       [filterType]: value,
     }));

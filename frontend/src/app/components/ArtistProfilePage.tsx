@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 interface Artist {
   id: string;
@@ -20,9 +20,10 @@ const ArtistProfilePage: React.FC<ArtistProfilePageProps> = ({ match }) => {
   const artistId = match.params.id;
 
   useEffect(() => {
-    axios.get(`/api/artists/${artistId}`)
-      .then(response => setArtist(response.data))
-      .catch(error => console.error('Error fetching artist data:', error));
+    axios
+      .get(`/api/artists/${artistId}`)
+      .then((response) => setArtist(response.data))
+      .catch((error) => console.error("Error fetching artist data:", error));
   }, [artistId]);
 
   if (!artist) return <div>Loading...</div>;
