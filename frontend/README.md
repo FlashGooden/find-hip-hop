@@ -5,11 +5,13 @@
 ## Features
 
 - **Interactive Map:**
+
   - Display a map of the United States with clickable regions.
   - Markers/icons for artists based on their associated cities or states.
   - Zoom functionality to explore regions in detail.
 
 - **Artist Profiles:**
+
   - Each artist has a profile page with the following:
     - Bio and background information.
     - Embedded music (e.g., Spotify or YouTube links).
@@ -17,14 +19,17 @@
     - Tour dates or upcoming events.
 
 - **Data Integration:**
+
   - Fetch artist and location data from a database or API.
   - Support for filtering artists by genre, region, or popularity.
 
 - **Dynamic Popups:**
+
   - Clicking on a map marker opens a popup with the artist's name, photo, and a brief description.
   - The popup includes a link to the artist's full profile page.
 
 - **User-Generated Content:**
+
   - Allow users to suggest new artists or update existing profiles (optional stretch feature).
 
 - **Modern UI/UX:**
@@ -34,8 +39,8 @@
 ## Tech Stack
 
 - **Frontend:** React with Google Maps API for the interactive map.
-- **Backend:** Node.js with Express for API routes or Firebase for a serverless backend.
-- **Database:** MongoDB or Firestore to store artist and location data.
+- **Backend:** Ruby on Rails in API mode
+- **Database:** Ruby on Rails using PostgreSQL
 - **Additional Libraries:** Next.js, React Router for navigation, Axios for API requests, and styled-components for UI design.
 
 ## Getting Started
@@ -74,4 +79,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the app.
-
