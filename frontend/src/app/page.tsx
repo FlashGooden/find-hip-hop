@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import MapComponent from "./components/MapComponent";
+import MapComponent from "./components/MapComponent/MapComponent";
 import FilterBar from "./components/FilterBar";
 
 const HomePage: React.FC = () => {
