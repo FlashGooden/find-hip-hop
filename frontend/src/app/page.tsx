@@ -19,7 +19,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      <h1>Find Hip Hop</h1>
+       <header>
+        <img src="/find-hip-hop-logo.png" alt="Find Hip Hop Logo" width={90} height={90} />
+        <h1>Find Hip Hop</h1>
+      </header>
       <FilterBar onFilterChange={handleFilterChange} />
       <MapComponent filters={filters} />
     </div>
