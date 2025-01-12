@@ -3,7 +3,6 @@ import {
   APIProvider,
   Map,
   MapCameraChangedEvent,
-  Marker,
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import axios from "axios";
@@ -40,24 +39,24 @@ const initialArtists: Artist[] = [
     id: "1",
     name: "Andre 3000",
     description: "Andre is a hip hop artist known for his unique style.",
-    latitude: 33.679,
-    longitude: -84.4394,
+    latitude: 33.6846,
+    longitude: -84.4363,
     image: "Andre-3k.png",
   },
   {
     id: "2",
-    name: "T.I.",
-    description: "TI is a renowned hip hop artist with numerous hits.",
-    latitude: 33.7702,
-    longitude: -84.4619,
-    image: "TI.png",
+    name: "Shawty Lo",
+    description: "Shawty Lo, was an American rapper from Atlanta, Georgia",
+    latitude: 33.780707,
+    longitude: -84.479678,
+    image: "shawty-lo.png",
   },
   {
     id: "3",
     name: "2 Chainz",
     description: "TI is a renowned hip hop artist with numerous hits.",
-    latitude: 33.6534,
-    longitude: -84.4494,
+    latitude: 33.608752,
+    longitude: -84.439249,
     image: "2chainz.png",
   },
   {
@@ -80,8 +79,8 @@ const initialArtists: Artist[] = [
     id: "6",
     name: "Killer Mike",
     description: "Killer Mike Got hits",
-    latitude: 33.7595,
-    longitude: -84.5054,
+    latitude: 33.761081,
+    longitude: -84.468734,
     image: "killer-mike.png",
   },
   {
@@ -92,16 +91,31 @@ const initialArtists: Artist[] = [
     longitude: -84.3393,
     image: "latto.png",
   },
+  {
+    id: "8",
+    name: "T.I.",
+    description: "TI is a renowned hip hop artist with numerous hits. Center Hill Cedar Ave that's where I be sukka",
+    latitude: 33.773192,
+    longitude: -84.463854,
+    image: "TI.png",
+  },
+  {
+    id: "9",
+    name: "Baby Tate",
+    description: "Baby Tate began playing the piano and dancing at a young age, and started producing her own beats by age 13.",
+    latitude: 33.759004,
+    longitude: -84.268821,
+    image: "baby-tate.png",
+  },
+  {
+    id: "10",
+    name: "Omeretta The Great",
+    description: "Omeretta The Great is a rapper from Atlanta, Georgia.",
+    latitude: 33.707299,
+    longitude: -84.380049,
+    image: "omeretta-the-great.png",
+  },
 ];
-const artistTIMarker = {
-  lat: 33.765,
-  lng: -84.451,
-};
-
-const artistAndreMarker = {
-  lat: 33.679,
-  lng: -84.4394,
-};
 
 const MapComponent: React.FC<MapComponentProps> = () => {
   const [selectedArtist, setSelectedArtist] = useState<Artist | null>(null);
@@ -112,9 +126,6 @@ const MapComponent: React.FC<MapComponentProps> = () => {
 
   useEffect(() => {
     // Fetch artist data from API
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, "API");
-    console.log(process, "API");
-
     // axios.get('/api/artists')
     //   .then(response => setArtists(response.data))
     //   .catch(error => console.error('Error fetching artist data:', error));
@@ -200,38 +211,6 @@ const MapComponent: React.FC<MapComponentProps> = () => {
       </Map>
     </APIProvider>
   );
-
-  // return (
-  //   <LoadScript
-  //     googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY || ""}
-  //   >
-  //     <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={4}>
-  //       {artists.map((artist) => (
-  //         <Marker
-  //           key={artist.id}
-  //           position={{ lat: artist.latitude, lng: artist.longitude }}
-  //           onClick={() => setSelectedArtist(artist)}
-  //         />
-  //       ))}
-
-  //       {selectedArtist && (
-  //         <InfoWindow
-  //           position={{
-  //             lat: selectedArtist.latitude,
-  //             lng: selectedArtist.longitude,
-  //           }}
-  //           onCloseClick={() => setSelectedArtist(null)}
-  //         >
-  //           <div>
-  //             <h3>{selectedArtist.name}</h3>
-  //             <p>{selectedArtist.description}</p>
-  //             <a href={`/artist/${selectedArtist.id}`}>View Profile</a>
-  //           </div>
-  //         </InfoWindow>
-  //       )}
-  //     </GoogleMap>
-  //   </LoadScript>
-  // );
 };
 
 export default MapComponent;
