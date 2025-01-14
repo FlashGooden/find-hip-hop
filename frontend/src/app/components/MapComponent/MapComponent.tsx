@@ -7,6 +7,7 @@ import {
 } from "@vis.gl/react-google-maps";
 import axios from "axios";
 import ArtistMarker from "../ArtistMarker/ArtistMarker";
+import ArtistModal from "../ArtistModal/ArtistModal";
 
 interface MapComponentProps {
   filters: {
@@ -23,11 +24,6 @@ export interface Artist {
   longitude: number;
   image: string;
 }
-
-const mapContainerStyle = {
-  height: "100vh",
-  width: "100%",
-};
 
 const center = {
   lat: 33.749,
@@ -54,7 +50,7 @@ const initialArtists: Artist[] = [
   {
     id: "3",
     name: "2 Chainz",
-    description: "TI is a renowned hip hop artist with numerous hits.",
+    description: "2Chainz thinks pretty girls love Trap music.",
     latitude: 33.608752,
     longitude: -84.439249,
     image: "2chainz.png",
@@ -123,6 +119,8 @@ const MapComponent: React.FC<MapComponentProps> = () => {
   const [artists, setArtists] = useState<Artist[]>(initialArtists);
   const [zoomLevel, setZoomLevel] = useState<number>(9);
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
 
   useEffect(() => {
     // Fetch artist data from API
@@ -136,17 +134,28 @@ const MapComponent: React.FC<MapComponentProps> = () => {
     setSelectedArtist(null);
   };
 
+  const handleMarkerClick = (artist: Artist) => {
+    setSelectedArtist(artist);
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedArtist(null);
+  };
+
   const handleMarkerMouseOver = (artist: Artist) => {
     if (hoverTimeout.current) {
       clearTimeout(hoverTimeout.current);
       hoverTimeout.current = null;
     }
     setSelectedArtist(artist);
+    setHoveredArtist(artist);
   };
 
   const handleMarkerMouseOut = () => {
     hoverTimeout.current = setTimeout(() => {
-      setSelectedArtist(null);
+      isModalOpen === false && setSelectedArtist(null);
     }, 600);
   };
 
@@ -159,7 +168,7 @@ const MapComponent: React.FC<MapComponentProps> = () => {
 
   const handleInfoWindowMouseLeave = () => {
     hoverTimeout.current = setTimeout(() => {
-      setSelectedArtist(null);
+      isModalOpen === false && setSelectedArtist(null);
     }, 900);
   };
 
@@ -184,6 +193,8 @@ const MapComponent: React.FC<MapComponentProps> = () => {
                 onHover={handleMarkerMouseOver}
                 onHoverOut={handleMarkerMouseOut}
                 zoomLevel={zoomLevel}
+                markerClickHandler={handleMarkerClick}
+                hoveredArtist={hoveredArtist}
               />
             ))}
           </>
@@ -209,6 +220,11 @@ const MapComponent: React.FC<MapComponentProps> = () => {
           </InfoWindow>
         )}
       </Map>
+      <ArtistModal
+        isOpen={isModalOpen}
+        onRequestClose={handleModalClose}
+        artist={selectedArtist}
+      />
     </APIProvider>
   );
 };
