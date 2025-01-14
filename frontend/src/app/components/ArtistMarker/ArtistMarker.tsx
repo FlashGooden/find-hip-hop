@@ -10,6 +10,8 @@ interface ArtistMarkerProps {
   onHoverOut: () => void;
   image: string;
   zoomLevel: number;
+  markerClickHandler: (artist: Artist) => void;
+  hoveredArtist: Artist | null;
 }
 
 const ArtistMarker: React.FC<ArtistMarkerProps> = ({
@@ -17,7 +19,9 @@ const ArtistMarker: React.FC<ArtistMarkerProps> = ({
   onHover,
   onHoverOut,
   image,
-  zoomLevel
+  zoomLevel,
+  markerClickHandler,
+  hoveredArtist
 }) => {
   const size = Math.max(20, Math.min(100, zoomLevel * 5));
 
@@ -27,6 +31,8 @@ const ArtistMarker: React.FC<ArtistMarkerProps> = ({
       onMouseEnter={() => onHover(artist)}
       onMouseLeave={() => onHoverOut()}
       collisionBehavior="REQUIRED_AND_HIDES_OPTIONAL"
+      onClick={() => markerClickHandler(artist)}
+      zIndex={hoveredArtist?.id === artist.id ? 1000 : undefined}
     >
       <img src={`/${image}`} className={styles.marker} width={size} height={size} alt={artist.name} style={{ cursor: "pointer" }} />
     </AdvancedMarker>
