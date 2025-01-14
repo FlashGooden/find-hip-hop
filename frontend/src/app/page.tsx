@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import MapComponent from "./components/MapComponent/MapComponent";
 import FilterBar from "./components/FilterBar";
+import styles from './page.module.css';
 
 const HomePage: React.FC = () => {
   const [filters, setFilters] = useState({
@@ -18,12 +19,14 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div>
-       <header>
+    <div className={styles.container}>
+       <header className={styles.header}>
         <img src="/find-hip-hop-logo.png" alt="Find Hip Hop Logo" width={90} height={90} />
-        <h1>Find Hip Hop</h1>
+        <h1 className={styles.title}>Find Hip Hop</h1>
       </header>
-      <FilterBar onFilterChange={handleFilterChange} />
+      <div className={styles.filterBar}>
+          <FilterBar onFilterChange={handleFilterChange} />
+      </div>
       <MapComponent filters={filters} />
     </div>
   );
