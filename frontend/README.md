@@ -6,7 +6,7 @@
 
 - **Interactive Map:**
 
-  - Display a map of the United States with clickable regions.
+  - Display a map of the United States with clickable regions. (This app is focused on Atlanta for test cases)
   - Markers/icons for artists based on their associated cities or states.
   - Zoom functionality to explore regions in detail.
 
@@ -41,7 +41,7 @@
 - **Frontend:** React with Google Maps API for the interactive map.
 - **Backend:** Ruby on Rails in API mode
 - **Database:** Ruby on Rails using PostgreSQL
-- **Additional Libraries:** Next.js, React Router for navigation, Axios for API requests, and styled-components for UI design.
+- **Additional Libraries:** Next.js, Axios for API requests, and styled-components for UI design.
 
 ## Getting Started
 
