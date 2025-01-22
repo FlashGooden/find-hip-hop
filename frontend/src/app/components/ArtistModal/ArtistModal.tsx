@@ -28,6 +28,7 @@ const ArtistModal: React.FC<ArtistModalProps> = ({ isOpen, onRequestClose, artis
           marginRight: '-50%',
           transform: 'translate(-50%, -50%)',
           display: 'absolute',
+          color: 'black',
           zIndex: 1000,
         },
       }}
