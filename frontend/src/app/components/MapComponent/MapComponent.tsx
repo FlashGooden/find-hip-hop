@@ -23,6 +23,12 @@ export interface Artist {
   latitude: number;
   longitude: number;
   image: string;
+  socialMedia: {
+    instagram?: string;
+    twitter?: string;
+    spotify?: string;
+    youtube?: string;
+  };
 }
 
 const center = {
@@ -38,6 +44,12 @@ const initialArtists: Artist[] = [
     latitude: 33.6846,
     longitude: -84.4363,
     image: "Andre-3k.png",
+    socialMedia: {
+      instagram: "andre3000",
+      twitter: "andre3000",
+      spotify: "artist/andre3000",
+      youtube: "@andre3000"
+    }
   },
   {
     id: "2",
@@ -46,6 +58,11 @@ const initialArtists: Artist[] = [
     latitude: 33.780707,
     longitude: -84.479678,
     image: "shawty-lo.png",
+    socialMedia: {
+      instagram: "shawtylo",
+      twitter: "shawtylo",
+      spotify: "artist/shawtylo"
+    }
   },
   {
     id: "3",
@@ -54,6 +71,12 @@ const initialArtists: Artist[] = [
     latitude: 33.608752,
     longitude: -84.439249,
     image: "2chainz.png",
+    socialMedia: {
+      instagram: "2chainz",
+      twitter: "2chainz",
+      spotify: "artist/2chainz",
+      youtube: "@2chainz"
+    }
   },
   {
     id: "4",
@@ -62,6 +85,12 @@ const initialArtists: Artist[] = [
     latitude: 32.0221,
     longitude: -81.0844,
     image: "Big-Boi.png",
+    socialMedia: {
+      instagram: "bigboi",
+      twitter: "bigboi",
+      spotify: "artist/bigboi",
+      youtube: "@bigboi"
+    }
   },
   {
     id: "5",
@@ -70,6 +99,12 @@ const initialArtists: Artist[] = [
     latitude: 33.59311,
     longitude: -84.51833,
     image: "Ludacris.png",
+    socialMedia: {
+      instagram: "ludacris",
+      twitter: "ludacris",
+      spotify: "artist/ludacris",
+      youtube: "@ludacris"
+    }
   },
   {
     id: "6",
@@ -78,6 +113,12 @@ const initialArtists: Artist[] = [
     latitude: 33.761081,
     longitude: -84.468734,
     image: "killer-mike.png",
+    socialMedia: {
+      instagram: "killer_mike",
+      twitter: "killer_mike",
+      spotify: "artist/killer_mike",
+      youtube: "@killer_mike"
+    }
   },
   {
     id: "7",
@@ -86,6 +127,12 @@ const initialArtists: Artist[] = [
     latitude: 33.4462,
     longitude: -84.3393,
     image: "latto.png",
+    socialMedia: {
+      instagram: "latto",
+      twitter: "latto",
+      spotify: "artist/latto",
+      youtube: "@latto"
+    }
   },
   {
     id: "8",
@@ -94,6 +141,12 @@ const initialArtists: Artist[] = [
     latitude: 33.773192,
     longitude: -84.463854,
     image: "TI.png",
+    socialMedia: {
+      instagram: "tip",
+      twitter: "tip",
+      spotify: "artist/tip",
+      youtube: "@tip"
+    }
   },
   {
     id: "9",
@@ -102,6 +155,12 @@ const initialArtists: Artist[] = [
     latitude: 33.759004,
     longitude: -84.268821,
     image: "baby-tate.png",
+    socialMedia: {
+      instagram: "babytate",
+      twitter: "babytate",
+      spotify: "artist/babytate",
+      youtube: "@babytate"
+    }
   },
   {
     id: "10",
@@ -110,6 +169,12 @@ const initialArtists: Artist[] = [
     latitude: 33.707299,
     longitude: -84.380049,
     image: "omeretta-the-great.png",
+    socialMedia: {
+      instagram: "omeretta_the_great",
+      twitter: "omeretta_the_great",
+      spotify: "artist/omeretta_the_great",
+      youtube: "@omeretta_the_great"
+    }
   },
 ];
 
