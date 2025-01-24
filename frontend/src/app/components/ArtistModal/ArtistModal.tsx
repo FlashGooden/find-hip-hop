@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import ArtistProfilePage from '../ArtistProfilePage';
+import ArtistProfilePage from '../ArtistProfilePage/ArtistProfilePage';
 import { Artist } from '../MapComponent/MapComponent';
 
 interface ArtistModalProps {
