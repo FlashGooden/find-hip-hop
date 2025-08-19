@@ -1,4 +1,5 @@
 # Find Hip-Hop App
+<img width="640" height="499" alt="Screenshot 2025-08-18 at 12 45 42 PM" src="https://github.com/user-attachments/assets/4debc692-5a61-4996-a4b4-e664d9e341ed" />
 
 [The Find Hip-Hop App](https://github.com/flashgoodenpro/find-hip-hop-app) is an interactive map application that allows users to explore hip-hop artists geographically. I'm building this application as a project for a non-profit called [Soul Food Cypher](https://www.soulfoodcypher.com/), which aims to change communities by using positive lyricism and freestyle. Users can click on different regions of a map to discover artists associated with those areas. Clicking on an artist icon or marker opens a profile page with information about the artist, including their bio, popular tracks, and links to streaming platforms.
 
